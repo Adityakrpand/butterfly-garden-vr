@@ -2,7 +2,7 @@
 
 import { OrbitControls } from '@react-three/drei'
 
-import Cube from './Cube'
+import Butterfly from './Butterfly'
 import Ground from './Ground'
 import Lights from './Lights'
 import Sky from './Sky'
@@ -13,7 +13,7 @@ export default function Scene() {
       <Sky />
       <Lights />
       <Ground />
-      <Cube />
+      <Butterfly />
 
       <OrbitControls
         enablePan={false}
