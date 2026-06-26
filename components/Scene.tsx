@@ -2,6 +2,7 @@
 
 import { OrbitControls } from '@react-three/drei'
 
+import Grass from './Grass'
 import Butterfly from './Butterfly'
 import Ground from './Ground'
 import Lights from './Lights'
@@ -12,6 +13,7 @@ export default function Scene() {
     <>
       <Sky />
       <Lights />
+      <Grass />
       <Ground />
       <Butterfly />
 
