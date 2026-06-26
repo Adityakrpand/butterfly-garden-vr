@@ -10,13 +10,22 @@ export default function Butterfly() {
   const { scene } = useGLTF('/models/butterfly.glb')
 
   useFrame(({ clock }) => {
-    if (!group.current) return
+  if (!group.current) return
 
-    const t = clock.getElapsedTime()
+  const t = clock.getElapsedTime()
+  const radius = 3
 
-    group.current.position.y = 1.5 + Math.sin(t * 2) * 0.25
-  })
+  const x = Math.cos(t) * radius
+  const z = Math.sin(t) * radius
 
+  group.current.position.set(
+    x,
+    1.5 + Math.sin(t * 2) * 0.25,
+    z
+  )
+
+  group.current.rotation.y = -t + Math.PI / 2
+})
   return (
     <group ref={group}>
       <primitive
